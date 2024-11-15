@@ -1,13 +1,11 @@
-#!binsh
+#!/bin/sh
 
-git clone -b 4.27 httpsgithub.comEpicGamesUnrealEngine
+git clone --depth 1 -b 4.27 https://github.com/EpicGames/UnrealEngine
 
 cd UnrealEngine
 
-.Setup.sh
-
-.GenerateProjectFiles.sh
-
+./Setup.sh
+./GenerateProjectFiles.sh
 make
 
-echo Unreal Engine Setup is Done
+echo "Unreal Engine Setup is Done"
